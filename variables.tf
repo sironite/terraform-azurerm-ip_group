@@ -16,10 +16,10 @@ variable "resource_group_name" {
 variable "ip_group_cidrs" {
   description = "A list of CIDRs or IP addresses."
   type        = list(string)
-  sensitive   = false 
+  sensitive   = false
 }
 variable "ip_group_tags" {
   description = " A mapping of tags to assign to the resource."
-  type        = map
+  type        = map(any)
   default     = {}
 }
