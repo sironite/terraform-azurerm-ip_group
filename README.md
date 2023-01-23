@@ -4,7 +4,7 @@
 
 # Usage - Module
 
-## Network Watcher Flow Log
+## IP Group
 ```hcl
 module "ip_group" {
   source  = "sironite/ip_group/azurerm"
