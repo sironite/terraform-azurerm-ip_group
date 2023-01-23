@@ -10,11 +10,11 @@ module "ip_group" {
   source  = "sironite/ip_group/azurerm"
   version = "x.x.x"
 
-  name                = var.ip_group_name
-  location            = var.azure_location
+  ip_group_name       = var.ip_group_name
+  azure_location      = var.azure_location
   resource_group_name = var.resource_group_name
 
-  cidrs = var.ip_group_cidrs
+  ip_group_cidrs = var.virtual_network_cidr
 }
 ```
 
@@ -42,7 +42,7 @@ No modules.
 | ip\_group\_cidrs | A list of CIDRs or IP addresses. | `list(string)` | yes |
 | ip\_group\_name | Specifies the name of the IP group. Changing this forces a new resource to be created. | `string` | yes |
 | resource\_group\_name | The name of the resource group in which to create the IP group. Changing this forces a new resource to be created. | `string` | yes |
-| ip\_group\_tags | A mapping of tags to assign to the resource. | `map` | no |
+| ip\_group\_tags | A mapping of tags to assign to the resource. | `map(any)` | no |
 
 ## Outputs
 
