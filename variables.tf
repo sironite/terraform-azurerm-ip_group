@@ -3,7 +3,7 @@ variable "azure_location" {
   type        = string
   sensitive   = false
 }
-variable "azurerm_ip_group_name" {
+variable "ip_group_name" {
   description = "Specifies the name of the IP group. Changing this forces a new resource to be created."
   type        = string
   sensitive   = false
