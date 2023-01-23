@@ -10,7 +10,7 @@ module "ip_group" {
   source  = "sironite/ip_group/azurerm"
   version = "x.x.x"
 
-  name                = var.azurerm_ip_group_name
+  name                = var.ip_group_name
   location            = var.azure_location
   resource_group_name = var.resource_group_name
 
@@ -39,8 +39,8 @@ No modules.
 | Name | Description | Type | Required |
 |------|-------------|------|:--------:|
 | azure\_location | The Azure Region where the Resource Group should exist. Changing this forces a new Resource Group to be created. | `string` | yes |
-| azurerm\_ip\_group\_name | Specifies the name of the IP group. Changing this forces a new resource to be created. | `string` | yes |
 | ip\_group\_cidrs | A list of CIDRs or IP addresses. | `list(string)` | yes |
+| ip\_group\_name | Specifies the name of the IP group. Changing this forces a new resource to be created. | `string` | yes |
 | resource\_group\_name | The name of the resource group in which to create the IP group. Changing this forces a new resource to be created. | `string` | yes |
 | ip\_group\_tags | A mapping of tags to assign to the resource. | `map` | no |
 
